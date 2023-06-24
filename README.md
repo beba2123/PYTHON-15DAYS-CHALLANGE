@@ -32,7 +32,9 @@ Eg. name = 'Anteneh';
 pring(f'My name is {name}');
 -> so the output will be My name is Anteneh.
 ==>> so you can use one of the two method that we like.
-==>> Lists they are ordered sequences that can holds a variety of object types.They uses brackets and commas to separate objects in the list.
+
+==>> Lists
+they are ordered sequences that can holds a variety of object types.They uses brackets and commas to separate objects in the list.
 [1,2,3,4....]. they also support indexing and slicing.
 Eg. my_list = ["Anteneh", 1234, 4543];
 print(len(my_list)); output 3;
@@ -42,4 +44,13 @@ Eg. my_list = ["Anteneh", 'selam'];
 my_list[0] = "Abera"; so we can chage it is easily .
 so if we say like print(my_list);
 ["Abera", 'selam']
+==>> there are method that we used in list like 'list name'.append(), 'list name'.pop(), 'list name'.reverse(), 'list name'.sort()
 
+==>> Dictionaries
+-> they are unordered mapping for storing objects they diffrent than list becouse of this but they use key-value pair which helps the users to quickly grabs objects without needing to know an index location.  
+-> they uses a curly braces and : for separte the key and value.
+Eg. my_dict = {'value1': 'Anteneh', 'value2': 4543,....};
+my_dict['value1'] -->> the output will be Anteneh.
+-> dictionaries can hold another dictionaries or lists inside of it.
+Eg. my_dict1 = {'value1': [1,2,2,'anteneh'], 'value2': {'name': 'alem'}};
+so for accessing it my_dict1[value1][3]
