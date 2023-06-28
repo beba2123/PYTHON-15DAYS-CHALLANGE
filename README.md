@@ -92,3 +92,9 @@ Note: Tuples are commonly used when you want to store a collection of items that
                 print(setUnion);
                 setInters = my_Sets.intersection(my_Sets1);
                 print(setInters);
+
+===>>> File I/O (file input and output)
+->in order to open file.txt first we have to give the directory and then 
+ ->1st myfile = ("E:\\Python-30days\\PYTHON-15DAYS-CHALLANGE\\main.txt")
+ -> then  the second step is ->file = open(myfile);
+ ->  so after this we can write or read a  file.
