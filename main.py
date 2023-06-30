@@ -92,3 +92,13 @@
 #         my_list.append(num);
 # # print(my_list);
 
+def check_even(mylist):
+    for list in mylist:
+        if(list % 2 == 0):
+          return ('one of the numbers are even!!');
+        else:
+           pass
+    return ('this is odd')
+
+# mylist = [1,2,3,4,5,6];
+print(check_even([1,2,5,7,9]))
