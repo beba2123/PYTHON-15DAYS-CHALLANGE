@@ -81,5 +81,14 @@
 # my_stringList = [str**2 for str in my_string];
 # print(my_stringList);
 
-my_list = [num for num in range(1,10)  if(num % 2 != 0)];
-print(my_list)
+# my_list = [num for num in range(1,10)  if(num % 2 != 0)];
+# print(my_list)
+
+# my_list = [num for num in range(1,50) if(num%3==0)];
+# print(my_list)
+
+# for num in range(1,50):
+#     if(num % 3 == 0):
+#         my_list.append(num);
+# # print(my_list);
+
