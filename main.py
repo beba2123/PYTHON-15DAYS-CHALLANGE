@@ -47,4 +47,39 @@
 # with open('file', mode='r') as file1:
 #     print(file1.read())
 # file1.close()
-    
+
+#loop(for, if)
+# my_iterable = [1,2,3,4,5,6,7,8,9,10];
+# sum =0;
+# for num in my_iterable:
+#     # if(num %2 == 0):
+#     #     print(f' even number: {num}');
+#     # else:
+#     #     print(f' odd number: {num}');
+#     sum += num
+#     print(sum)
+# print(f'sum of the num :=> {sum}')
+
+# mylist = [(1,2), (3,4)]; 
+# for (a,b) in mylist: #this is called tuple unpacking
+#     print(a);
+#     print(b);
+
+# my_dict = {'value1': 'Anteneh', 'value2': 4543};
+# for ket,value in my_dict.items():
+#     print(value)
+# name = input("Enter your name: ")
+# print("Hello, " + name + "!")
+
+# age = input("Enter your age: ")
+# print("You are " + age + " years old.")
+# int(age)
+# print(type(age));
+
+# list comprehension
+# my_string = [2,3,4,5,6];
+# my_stringList = [str**2 for str in my_string];
+# print(my_stringList);
+
+my_list = [num for num in range(1,10)  if(num % 2 != 0)];
+print(my_list)

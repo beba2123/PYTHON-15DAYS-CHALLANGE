@@ -34,6 +34,7 @@ pring(f'My name is {name}');
 ==>> so you can use one of the two method that we like.
 
                 ==>> Lists
+
 they are ordered sequences that can holds a variety of object types.They uses brackets and commas to separate objects in the list.
 [1,2,3,4....]. they also support indexing and slicing.
 Eg. my_list = ["Anteneh", 1234, 4543];
@@ -47,6 +48,7 @@ so if we say like print(my_list);
 ==>> there are method that we used in list like 'list name'.append(), 'list name'.pop(), 'list name'.reverse(), 'list name'.sort()
 
             ==>> Dictionaries
+
 -> they are unordered mapping for storing objects they diffrent than list becouse of this but they use key-value pair which helps the users to quickly grabs objects without needing to know an index location.  
 -> they uses a curly braces and : for separte the key and value.
 Eg. my_dict = {'value1': 'Anteneh', 'value2': 4543,....};
@@ -60,6 +62,7 @@ my_dict1['addAnother'] = 'beba'--->so it will add this to the dictionary.
 -> if we want to know the keys my_dict.keys(); out-put [value1, value2] and also we can do it for the value my_dict.value();
 
             ===>> Tuples
+
 -> they are like a list however they have one key diffrence this is their immutablity. and they use parenthesis();
 my_tuple = (1, 2, 3, 'a', 'b', 'c')
 -> they can contains multiple types like integer,string....and you can access them using indexing.
@@ -76,25 +79,98 @@ concatenated_tuple = tuple1 + tuple2
 print(concatenated_tuple) # Output: (1, 2, 3, 'a', 'b', 'c')
 
 Note: Tuples are commonly used when you want to store a collection of items that should not be modified, such as coordinates, database records, or any other situation where immutability is desired.
-  
+
              ===>> Sets
+
 ===>>>set is an unorderd collection of unique elements.unlike lists or tuples,they don't maintain specific order for their element.
-            Example -> my_set = {1, 2, 3, 4, 5}
+Example -> my_set = {1, 2, 3, 4, 5}
 ==>> set can also be created from another iterable objects like list or tuples ...
-            Example -> my_set = set(tuple1);
-                       print(my_set); ==>> {1, 2, 3};
-==>> they perform some mathimatical operation like union(for joining with other set.), intersect(for finding a value between two sets)  and diffrence                   
-                mylist1= ["Anteneh", 4323, "selam", ];
-                my_Sets = set(mylist1);
-                print(my_Sets)
-                my_Sets1 = {"alem", 22323, "woldegebriel", "Anteneh"};
-                setUnion = my_Sets.union(my_Sets1);
-                print(setUnion);
-                setInters = my_Sets.intersection(my_Sets1);
-                print(setInters);
+Example -> my_set = set(tuple1);
+print(my_set); ==>> {1, 2, 3};
+==>> they perform some mathimatical operation like union(for joining with other set.), intersect(for finding a value between two sets) and diffrence  
+ mylist1= ["Anteneh", 4323, "selam", ];
+my_Sets = set(mylist1);
+print(my_Sets)
+my_Sets1 = {"alem", 22323, "woldegebriel", "Anteneh"};
+setUnion = my_Sets.union(my_Sets1);
+print(setUnion);
+setInters = my_Sets.intersection(my_Sets1);
+print(setInters);
 
 ===>>> File I/O (file input and output)
-->in order to open file.txt first we have to give the directory and then 
- ->1st myfile = ("E:\\Python-30days\\PYTHON-15DAYS-CHALLANGE\\main.txt")
- -> then  the second step is ->file = open(myfile);
- ->  so after this we can write or read a  file.
+->in order to open file.txt first we have to give the directory and then
+->1st myfile = ("E:\\Python-30days\\PYTHON-15DAYS-CHALLANGE\\main.txt")
+-> then the second step is ->file = open(myfile);
+-> so after this we can write or read a file.
+
+->tuples unpacking -> which to unpack tuples that are inside list.
+mylist = [(1,2), (3,4)];
+for (a,b) in mylist:
+print(a);
+print(b);
+->when we want to iterate using for loop for a dictionary
+my_dict = {'value1': 'Anteneh', 'value2': 4543};
+for key,value in my_dict.items:
+print(value) or print(key);
+NOTE-->>the main point is using .items becouse it changes it to a tuple one and we access it using tuple unpacking.
+
+-->> also the note in a while loop ..we  can use it with an else
+while condtion:
+   print();
+else:
+   print();
+
+===>> there are some statment in our loops to add additional funtionalty for various cases
+  like continue, pass, break.
+==>> addition useful oprator
+ we use (range operator) in for loop for determinre the index of the loop.
+ for num in range(1, 10,2--> for increase the output by 2..):
+  print(num)-->it will print out till it reaches 9. it doesnot include 10.
+
+===>>> enumerate is built-in function that allows you to iterate over a sequence(such as list, tuple, or string) while keeping track of the index of each elemeent. 
+it return tuples where each tuple contain the index and the corrsponding element from the orginal sequence.
+fruits = ['apple', 'banana', 'cherry']
+
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+the out-put will be like
+0 apple
+1 banana
+2 cherry
+
+===>>> zip operator it is a built in function that allows to combine  multiple  iterable into single iterable tuples.
+Example->
+fruits = ['apple', 'banana', 'cherry']
+prices = [1.0, 0.5, 0.8]
+quantities = [5, 10, 3]
+
+zipped = zip(fruits, prices, quantities)
+
+for item in zipped:
+    print(item)
+==> the output is going to be  
+      ('apple', 1.0, 5)
+      ('banana', 0.5, 10)
+      ('cherry', 0.8, 3)
+==> you can convert zip into list function like 
+zipped_list = list(zipped);
+print(zipped_list);
+
+the out-put
+[('apple', 1.0, 5), ('banana', 0.5, 10), ('cherry', 0.8, 3)]
+
+===>>>list comprehension 
+->is a concise way to create lists in python.it provides a compact and readable syntax for generating new lists based  on existing iterable, applying condition, and perform transformations.
+new_list = [element for element in iterable_name];
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = [x**2 for x in numbers]
+print(squared_numbers)  # Output: [1, 4, 9, 16, 25]
+
+==> we can use .append in list comprehension
+Example  celcius =  [0,10,20,30];
+farnheit = [];
+   for temp in celcius:
+     farnheit.append(((9/5)*temp + 32))
+and also we can use it
+farnheit = [((9/5)*temp + 32) for temp in celcius]
