@@ -91,14 +91,110 @@
 #     if(num % 3 == 0):
 #         my_list.append(num);
 # # print(my_list);
-
-def check_even(mylist):
-    for list in mylist:
-        if(list % 2 == 0):
-          return ('one of the numbers are even!!');
-        else:
-           pass
-    return ('this is odd')
+  
+# def check_even(mylist):
+#     for list in mylist:
+#         if(list % 2 == 0):
+#           return ('one of the numbers are even!!');
+#         else:
+#            pass
+#     return ('this is odd')
 
 # mylist = [1,2,3,4,5,6];
-print(check_even([1,2,5,7,9]))
+# print(check_even([1,2,5,7,9]))
+
+# mylist  = [1,2,3,4,5,6,7,8,9];
+
+# def check_even(mylist):
+
+#     #creating placeholder
+#     new_even_list = [];
+#     new_odd_list = [];
+#     #then iterate through the given list
+#     for list in mylist:
+#         #if he find an even number it is going to  append in the placeholder 
+#         if list % 2 == 0:
+#             new_even_list.append(list)
+#         else:
+#             new_odd_list.append(list)
+#     return (new_even_list, new_odd_list)
+# print(check_even([1,2,3,4,5,6,7,8,9]))
+
+# working_hours = [('anteneh', 200), ('beleta', 5000), ('seleshi', 700)];
+
+# def employer_check(working_hours):
+#     check_hour = 0;
+#     employer_month = '';
+#     for keys, value in working_hours:
+#         if value > check_hour:
+#             check_hour = value;
+#             employer_month = keys;
+#     return (employer_month, check_hour);
+
+# print(employer_check(working_hours))
+# from pickletools import pylist
+# from random import shuffle
+
+# my_list = ['', '0', ''];
+
+# def shuffle_list(mylist):  #this function is for shuffle the given list
+#     shuffle(mylist)
+#     return mylist
+# def player_guess():  #then make the player guess.
+#     guess = ['']
+#     while guess not in ['0','1','2']:
+#         guess = input("please pick a number between: 0,1 and 2 ?")
+
+    
+#     return int(guess)
+# guess = player_guess()
+# print(guess)
+# def check_guess(my_list, guess):
+#     shuffle_list(my_list)
+#     if my_list[guess] == '0':
+#         print('your guess is correct..')
+#         print(my_list)
+#     else:
+#         print('you are wrong...')
+#         print(my_list)
+
+# print(check_guess(my_list, guess))
+
+# def myfunction(*args):
+#  sum = 0;
+#  for item in args:
+#        sum += item;
+#  return sum;   
+
+# print(myfunction(1,2,3,4));
+
+# def myfunc(**kwargs):
+#     print(kwargs);
+#     if 'fruit' in  kwargs:
+#         print('my favourite fruit is {}'.format(kwargs['fruit']))
+#     else:
+#        print('there is no favourite fruit ')
+# print(myfunc(fruit= 'apple', name= 'anteneh'))
+
+    #map
+# def square(num):
+#      return num**2;
+# my_Nums = [1,2,3,4,5]
+# onemap = map(square, my_Nums);
+# print(list(onemap))
+# def splic(myString):
+#      if len(myString)%2 == 0:
+#           return('EVEN');
+#      else:
+#           return(myString[0]);
+
+# mylist = ['anteneh', 'alem', 'abeba'];
+
+# print(list(map(splic, mylist)));
+
+   #filter
+# def check_even(num):
+#    return num % 2 == 0;
+# my_num = [1,3,4,6,4,2,1];
+# my_filter = list(filter(check_even, my_num));
+# print(my_filter);

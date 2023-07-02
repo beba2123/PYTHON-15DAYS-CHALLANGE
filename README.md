@@ -174,3 +174,40 @@ farnheit = [];
      farnheit.append(((9/5)*temp + 32))
 and also we can use it
 farnheit = [((9/5)*temp + 32) for temp in celcius]
+
+
+===>>>*args and **kwargs
+->*args  is also known as args or star args that allows you to pass an arbitrary number of arguments to a function.it pass  the format as a tuple argument.
+
+def myfunction(*args):
+   return sum((args));
+
+print(myfunction(1,2,3,4)) 
+
+===>>> **kwargs
+-> it is called key argument which accept arbitrary number of argument and  return dictionary type to who ever access it.
+->def myfunc(**kwargs):
+    print(kwargs);
+    if 'fruit' in  kwargs:
+        print('my favourite fruit is {}'.format(kwargs['fruit']))
+   else:
+       print('there is no favourite fruit ')
+ print(myfunc())
+
+===>>> map
+-> map is a built in function that applies to a given function to each item of an iterable like string, tuple, list and returns an iterator that yields the results. map takes two argument the function to be applied and the iterable containing  the elements to be processed.
+
+Example  -> def square(num):
+               return num**2;
+            my_Nums = [1,2,3,4,5]
+            onemap = list(map(square, my_Nums));
+            for items in onemap:
+                print(items);
+               
+===>>> filter 
+-> it is used to filter out a value inside a list  or any iterable object based on the function  requirment.
+Example -> def check_even(num):
+               return if num % 2 == 0;
+            my_num = [1,3,4,6,4,2,1];
+            my_filter = list(filter(check_even, my_num));
+            print(my_filter)
