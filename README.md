@@ -220,3 +220,30 @@ lambda argument: expression
       but using lambda function
    square = lambda x: x**2;
    print(square(5)) => out-put 25
+
+
+
+   ===>>> OBJECT ORIENTED PROGRAMMING.
+=> __init__ method -> it is a special method that used to intialize the attributes or properties of an object when  class is created and it  is  also known as constructor.
+      -> the __init__ method is defined within the class and automatically called when you create new instance of that class.
+   class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.mileage = 0
+    
+    def drive(self, miles):
+        self.mileage += miles
+
+
+my_car = Car("Toyota", "Camry", 2022) -> if use see here 
+print(my_car.make)  # Output: Toyota
+print(my_car.model)  # Output: Camry
+print(my_car.year)  # Output: 2022
+print(my_car.mileage)  # Output: 0
+
+my_car.drive(100)
+print(my_car.mileage)  # Output: 100
+
+Note -->> use cannot use return inside a method you only use it inside a function.
