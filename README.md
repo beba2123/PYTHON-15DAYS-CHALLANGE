@@ -211,3 +211,12 @@ Example -> def check_even(num):
             my_num = [1,3,4,6,4,2,1];
             my_filter = list(filter(check_even, my_num));
             print(my_filter)
+
+===>>> Lamda Expression
+-> a lambda expression is a way to create anonymous functions which means that create a function without a name.they are often used in satuation  wherea small  like  one line function required and defining a full fledged function.
+lambda argument: expression 
+ def square(x):
+      return x**2;
+      but using lambda function
+   square = lambda x: x**2;
+   print(square(5)) => out-put 25
