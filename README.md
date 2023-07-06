@@ -269,3 +269,33 @@ derived_obj = DerivedClass()
 # Calling the greet method
 base_obj.greet()    # Output: "Hello from the base class!"
 derived_obj.greet() # Output: "Hello from the derived class!"
+
+===>>>  Abstract Class
+=> it is a class that cannot be instantiated directly and is meant to be subclasse by the other class.it serves as blue print for other classes to define common method and attributes
+=>python by nature  doesnot have or provide a built in keyword for defining  absract classes like some other programming language. however it provide an "abc" module as a base class that stands for abstract  class and additionally, you can use the 'abstractmethod' decorator from the module to mark specific method.
+
+from abc import ABC, abstractmethod
+
+
+class AbstractClassExample(ABC):
+
+    @abstractmethod  -> this one is a decorator for specifing the method
+
+    def abstract_method(self):
+        pass
+
+    def regular_method(self):
+        print("This is a regular method.")
+
+# Attempting to instantiate the abstract class will raise an error
+# instance = AbstractClassExample()
+
+class ConcreteClassExample(AbstractClassExample):
+    
+    def abstract_method(self):  ->>overriding the abstract method.
+        print("Implementation of abstract_method.")
+
+# Creating an instance of the concrete subclass
+instance = ConcreteClassExample()
+instance.abstract_method()
+instance.regular_method()

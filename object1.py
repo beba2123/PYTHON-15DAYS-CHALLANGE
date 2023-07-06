@@ -31,27 +31,47 @@
 # print(circle.area)
 # print("the perimeter of the circle {} and the area of the string is gonna be {}" .format(circle.perimeter() , circle.area1()))
 
-class Cat():
+# class Cat():
 
-    def __init__(self, name):
-        self.name = name;
-    def Sound(self):
-        return (self.name + ' says Meow..')
+#     def __init__(self, name):
+#         self.name = name;
+#     def Sound(self):
+#         return (self.name + ' says Meow..')
 
-class Dog():
+# class Dog():
 
-    def __init__(self, name):
-        self.name = name;
-    def Sound(self):
-        return (self.name + ' says wooof....')
+#     def __init__(self, name):
+#         self.name = name;
+#     def Sound(self):
+#         return (self.name + ' says wooof....')
     
-dog = Dog('biku')
-cat = Cat('shershta');
+# dog = Dog('biku')
+# cat = Cat('shershta');
 
-print(cat.Sound())
-print(dog.Sound())
+# print(cat.Sound())
+# print(dog.Sound())
 
-def Speak(Animal):
-    return (Animal.Sound())
+# def Speak(Animal):
+#     return (Animal.Sound())
 
-print(Speak(dog)) 
+# print(Speak(dog)) 
+
+from abc import ABC, abstractmethod
+
+class AbstractClass():
+
+    def __init__(self, name):
+        self.name = name
+    
+    @abstractmethod  
+    def Abstract_Speak(self):
+        return self.name + " this is abstract speak, "
+
+class ConcreteClass(AbstractClass):
+
+    def Abstract_Speak(self):
+        return super().Abstract_Speak() + " BY Concerete Class. "   
+
+concerte = ConcreteClass('hi');
+
+print(concerte.Abstract_Speak())
