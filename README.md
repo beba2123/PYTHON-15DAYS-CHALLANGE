@@ -246,4 +246,26 @@ print(my_car.mileage)  # Output: 0
 my_car.drive(100)
 print(my_car.mileage)  # Output: 100
 
-Note -->> use cannot use return inside a method you only use it inside a function.
+===>>> Inheritance.
+-> foundamental concept of object oriented programming. it allows to create new class by deriving the characterstics from  an  existing class. so the existing  class is called base class(parent classs) and newly created class is  called child class.so the drived class inherit all the variable and method from the base class and use it.
+  class BaseClass():
+   print("this is the baseclass that are going to be inherited..");
+  class derivedClass(BaseClass):
+   print('this is the class that is going to be inherit..')
+
+==>>method over-riding -> when the derived class uses the same method as the base class and adding or subtraciting additional information on that method called method overriding.
+      class BaseClass:
+    def greet(self):
+        print("Hello from the base class!")
+
+class DerivedClass(BaseClass):
+    def greet(self):
+        print("Hello from the derived class!")
+
+# Creating objects
+base_obj = BaseClass()
+derived_obj = DerivedClass()
+
+# Calling the greet method
+base_obj.greet()    # Output: "Hello from the base class!"
+derived_obj.greet() # Output: "Hello from the derived class!"
