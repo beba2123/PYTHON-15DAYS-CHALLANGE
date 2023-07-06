@@ -300,3 +300,5 @@ class ConcreteClassExample(AbstractClassExample):
 instance = ConcreteClassExample()
 instance.abstract_method()
 instance.regular_method()
+
+# __namea__ and __main__

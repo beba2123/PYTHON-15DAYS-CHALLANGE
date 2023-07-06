@@ -56,22 +56,39 @@
 
 # print(Speak(dog)) 
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class AbstractClass():
+# class AbstractClass():
 
-    def __init__(self, name):
-        self.name = name
+#     def __init__(self, name):
+#         self.name = name
     
-    @abstractmethod  
-    def Abstract_Speak(self):
-        return self.name + " this is abstract speak, "
+#     @abstractmethod  
+#     def Abstract_Speak(self):
+#         return self.name + " this is abstract speak, "
 
-class ConcreteClass(AbstractClass):
+# class ConcreteClass(AbstractClass):
 
-    def Abstract_Speak(self):
-        return super().Abstract_Speak() + " BY Concerete Class. "   
+#     def Abstract_Speak(self):
+#         return super().Abstract_Speak() + " BY Concerete Class. "   
 
-concerte = ConcreteClass('hi');
+# concerte = ConcreteClass('hi');
 
-print(concerte.Abstract_Speak())
+# print(concerte.Abstract_Speak())
+
+class Book():
+
+    def __init__(self, name, author, page):
+        self.name = name;
+        self.author = author;
+        self.page = page;
+
+    def __str__(self): # writing the string representation of the class
+        return f"{self.name} by {self.author}";
+    
+    def __len__(self):
+        return " The Length of the book is {} ".format(self.page)
+    
+book = Book(' python ', ' beba ', 900);
+print(str(book));
+print((len(book)))
