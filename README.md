@@ -176,7 +176,7 @@ and also we can use it
 farnheit = [((9/5)*temp + 32) for temp in celcius]
 
 
-===>>>*args and **kwargs
+# *args and **kwargs
 ->*args  is also known as args or star args that allows you to pass an arbitrary number of arguments to a function.it pass  the format as a tuple argument.
 
 def myfunction(*args):
@@ -184,7 +184,7 @@ def myfunction(*args):
 
 print(myfunction(1,2,3,4)) 
 
-===>>> **kwargs
+# **kwargs
 -> it is called key argument which accept arbitrary number of argument and  return dictionary type to who ever access it.
 ->def myfunc(**kwargs):
     print(kwargs);
@@ -194,7 +194,7 @@ print(myfunction(1,2,3,4))
        print('there is no favourite fruit ')
  print(myfunc())
 
-===>>> map
+#  map
 -> map is a built in function that applies to a given function to each item of an iterable like string, tuple, list and returns an iterator that yields the results. map takes two argument the function to be applied and the iterable containing  the elements to be processed.
 
 Example  -> def square(num):
@@ -204,7 +204,7 @@ Example  -> def square(num):
             for items in onemap:
                 print(items);
                
-===>>> filter 
+# filter 
 -> it is used to filter out a value inside a list  or any iterable object based on the function  requirment.
 Example -> def check_even(num):
                return if num % 2 == 0;
@@ -212,7 +212,7 @@ Example -> def check_even(num):
             my_filter = list(filter(check_even, my_num));
             print(my_filter)
 
-===>>> Lamda Expression
+# Lamda Expression
 -> a lambda expression is a way to create anonymous functions which means that create a function without a name.they are often used in satuation  wherea small  like  one line function required and defining a full fledged function.
 lambda argument: expression 
  def square(x):
@@ -223,7 +223,7 @@ lambda argument: expression
 
 
 
-   ===>>> OBJECT ORIENTED PROGRAMMING.
+   # ===>>> OBJECT ORIENTED PROGRAMMING.
 => __init__ method -> it is a special method that used to intialize the attributes or properties of an object when  class is created and it  is  also known as constructor.
       -> the __init__ method is defined within the class and automatically called when you create new instance of that class.
    class Car:
@@ -246,14 +246,15 @@ print(my_car.mileage)  # Output: 0
 my_car.drive(100)
 print(my_car.mileage)  # Output: 100
 
-===>>> Inheritance.
+# Inheritance.
 -> foundamental concept of object oriented programming. it allows to create new class by deriving the characterstics from  an  existing class. so the existing  class is called base class(parent classs) and newly created class is  called child class.so the drived class inherit all the variable and method from the base class and use it.
   class BaseClass():
    print("this is the baseclass that are going to be inherited..");
   class derivedClass(BaseClass):
    print('this is the class that is going to be inherit..')
 
-==>>method over-riding -> when the derived class uses the same method as the base class and adding or subtraciting additional information on that method called method overriding.
+#  method over-riding 
+    -> when the derived class uses the same method as the base class and adding or subtraciting additional information on that method called method overriding.
       class BaseClass:
     def greet(self):
         print("Hello from the base class!")
@@ -270,7 +271,7 @@ derived_obj = DerivedClass()
 base_obj.greet()    # Output: "Hello from the base class!"
 derived_obj.greet() # Output: "Hello from the derived class!"
 
-===>>>  Abstract Class
+# Abstract Class
 => it is a class that cannot be instantiated directly and is meant to be subclasse by the other class.it serves as blue print for other classes to define common method and attributes
 =>python by nature  doesnot have or provide a built in keyword for defining  absract classes like some other programming language. however it provide an "abc" module as a base class that stands for abstract  class and additionally, you can use the 'abstractmethod' decorator from the module to mark specific method.
 
