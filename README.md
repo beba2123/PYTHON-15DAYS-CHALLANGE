@@ -301,4 +301,24 @@ instance = ConcreteClassExample()
 instance.abstract_method()
 instance.regular_method()
 
-# __namea__ and __main__
+# __name__ and __main__
+
+==>> in python every file can act as a module that can be imported by other files. when module is  imported, its code gets excuted, and  it's variable, function and also classes also available
+for use.
+-> so the  __name__ == '__main__' idiom is used in python scripts and serves as an entry point for the program so when python  interpretor run it checks first that the value of '__name__' is in the '__main__' indicating that the  script is bieng run as a main program
+
+# Error Handling 
+
+==> there are common approache we use inorder to handle error in python 
+ 1st try-except block -> it allows you to catch and handle specific exceptions that might occur during the excution of a code.
+
+ try:
+    # Code that may raise an exception
+except ExceptionType1:
+    # Handle exception of type ExceptionType1
+except ExceptionType2:
+    # Handle exception of type ExceptionType2
+else:
+    # Code to execute if no exception occurred or means that when no error occur.
+finally:
+    # Code that always executes, regardless of exceptions
