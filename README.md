@@ -322,3 +322,39 @@ else:
     # Code to execute if no exception occurred or means that when no error occur.
 finally:
     # Code that always executes, regardless of exceptions
+
+-->> you can have multiple 'Except' blocks to handle diffrent types of exception. the exceptions types can be built-in exception provided by python
+
+# unittest
+-->> it is a built in test framework in python that allows you to write and excute unittest for my code. it provides a set of tool and methods to define test
+cases, run tests, and assert expected outcomes.
+-->> it follows the Unit-Style testing pattern which means that it is infulenced by the design of junit, a popular framework for testing java.
+ 
+ --> after import the unittest we have to create a class for testing and inherit it from (unittest.TestCase) so this provides as an assertion methods and other testing utilities that you can use to test my code and verify expected outcomes.
+  => here are common methods of assertion
+        assertEqual(a, b)
+        assertNotEqual(a, b)
+        assertTrue(x)
+        assertFalse(x) ... and some other..
+
+import unittest -> import the unittest
+
+def text_cap(text):  ->> then create method which is going to be test..
+
+    # return text.capitalize() // captalize only make the first letter on the string.
+    return text.title() #
+
+class TestClass(unittest.TestCase): --> this is a test class
+     
+    def test_one_word(self): --> testing by using one word..
+        text = 'python'
+        result = text_cap(text);
+        self.assertEqual(result, 'Python')
+
+    def test_multi_word(self):
+       text = 'anteneh alem'  testing by using double word..
+       result = text_cap(text)
+       self.assertEqual(result, 'Anteneh Alem')
+    
+if __name__ == '__main__':  and check lastly if it the unittest is in the main function
+    unittest.main()

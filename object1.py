@@ -76,19 +76,71 @@
 
 # print(concerte.Abstract_Speak())
 
-class Book():
+# class Book():
 
-    def __init__(self, name, author, page):
-        self.name = name;
-        self.author = author;
-        self.page = page;
+#     def __init__(self, name, author, page):
+#         self.name = name;
+#         self.author = author;
+#         self.page = page;
 
-    def __str__(self): # writing the string representation of the class
-        return f"{self.name} by {self.author}";
+#     def __str__(self): # writing the string representation of the class
+#         return f"{self.name} by {self.author}";
     
-    def __len__(self):
-        return " The Length of the book is {} ".format(self.page)
+#     def __len__(self):
+#         return " The Length of the book is {} ".format(self.page)
     
-book = Book(' python ', ' beba ', 900);
-print(str(book));
-print((len(book)))
+# book = Book(' python ', ' beba ', 900);
+# print(str(book));
+# print((len(book)))
+
+
+# def add(num1, num2):
+#     return num1 + num2;
+
+# num1 = 10;
+# num2 = int(input('please enter any number: '));
+
+# try:
+#     add(num1, num2)
+# except:
+#     print(' we cannot add integer and string together..!!')
+# else:
+#     print('oww it seems that you are adding two numbers together..')
+#     print(add(num1, num2))
+
+# def ask_for_integer():
+
+#     while True:
+#         try:
+#             result = int(input('please enter any number..: '))
+#         except:
+#             print(' it is a word, not a number.. ')
+#             continue
+#         else:
+#             print('oww it is a number ')
+#             break;
+#         finally:
+#             print('end of try/except and also finally.. ')
+
+# print(ask_for_integer())
+
+import unittest
+
+def text_cap(text):
+    # return text.capitalize() // captalize only make the first letter on the string.
+    return text.title() #
+
+class TestClass(unittest.TestCase):
+
+    def test_one_word(self):
+        text = 'python'
+        result = text_cap(text);
+        self.assertEqual(result, 'Python')
+
+    def test_multi_word(self):
+       text = 'anteneh alem'
+       result = text_cap(text)
+       self.assertEqual(result, 'Anteneh Alem')
+    
+if __name__ == '__main__':
+    unittest.main()
