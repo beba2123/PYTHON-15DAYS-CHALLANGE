@@ -124,23 +124,66 @@
 
 # print(ask_for_integer())
 
-import unittest
+# import unittest
 
-def text_cap(text):
-    # return text.capitalize() // captalize only make the first letter on the string.
-    return text.title() #
+# def text_cap(text):
+#     # return text.capitalize() // captalize only make the first letter on the string.
+#     return text.title() #
 
-class TestClass(unittest.TestCase):
+# class TestClass(unittest.TestCase):
 
-    def test_one_word(self):
-        text = 'python'
-        result = text_cap(text);
-        self.assertEqual(result, 'Python')
+#     def test_one_word(self):
+#         text = 'python'
+#         result = text_cap(text);
+#         self.assertEqual(result, 'Python')
 
-    def test_multi_word(self):
-       text = 'anteneh alem'
-       result = text_cap(text)
-       self.assertEqual(result, 'Anteneh Alem')
+#     def test_multi_word(self):
+#        text = 'anteneh alem'
+#        result = text_cap(text)
+#        self.assertEqual(result, 'Anteneh Alem')
     
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     unittest.main()  
+
+# import time
+
+# def execution_time_decorator(func):
+#     def wrapper(*args, **kwargs):
+#         start_time = time.time()
+#         result = func(*args, **kwargs)
+#         end_time = time.time()
+#         excution_time = end_time - start_time;
+#         print(f" Function {func.__name__} took {excution_time} seconds to excute ")
+#         return result
+#     return wrapper
+
+# @execution_time_decorator
+# def my_function(a, b, c, d):
+#     return a + b + c + d;
+
+# print(my_function(334355342135, 513455131340, 32444454, 23425452))
+
+
+def authorization_decorator(func):
+    def wrapper(user):
+        if user.is_authenticated:
+            return func(user)
+        else:
+            raise Exception(" User is nott authenticated ")
+    return wrapper;
+
+class User:
+
+    def __init__(self, name, is_authenicated):
+        self.name = name
+        self.is_authenticated = is_authenicated
+
+@authorization_decorator
+def delete_user(user):
+    print(f"Deleting data for user: {user.name}")
+
+user1  = User('antenh', True)
+user2  = User('beba', False)
+
+# delete_user(user1)
+delete_user(user2)
