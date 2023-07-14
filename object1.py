@@ -164,26 +164,59 @@
 # print(my_function(334355342135, 513455131340, 32444454, 23425452))
 
 
-def authorization_decorator(func):
-    def wrapper(user):
-        if user.is_authenticated:
-            return func(user)
-        else:
-            raise Exception(" User is nott authenticated ")
-    return wrapper;
+# def authorization_decorator(func):
+#     def wrapper(user):
+#         if user.is_authenticated:
+#             return func(user)
+#         else:
+#             raise Exception(" User is nott authenticated ")
+#     return wrapper;
 
-class User:
+# class User:
 
-    def __init__(self, name, is_authenicated):
-        self.name = name
-        self.is_authenticated = is_authenicated
+#     def __init__(self, name, is_authenicated):
+#         self.name = name
+#         self.is_authenticated = is_authenicated
 
-@authorization_decorator
-def delete_user(user):
-    print(f"Deleting data for user: {user.name}")
+# @authorization_decorator
+# def delete_user(user):
+#     print(f"Deleting data for user: {user.name}")
 
-user1  = User('antenh', True)
-user2  = User('beba', False)
+# user1  = User('antenh', True)
+# user2  = User('beba', False)
 
-# delete_user(user1)
-delete_user(user2)
+# # delete_user(user1)
+# delete_user(user2)
+
+
+#generator example 
+
+# def num_generator(n):
+#     i = 0;
+#     while(i < n):
+#         yield n;
+#         n = n - 1;
+
+# for num in num_generator(5): 
+#     print(num);
+
+# do fabionacci number using function.
+
+def fubionacci_genarator(n):
+    a = 1;
+    b = 1;
+    lists = []
+    for i in range(n):
+        lists.append(a)
+        a,b = b,a+b;
+    return lists
+# for num in fubionacci_genarator(10):
+#      print(num)
+print(fubionacci_genarator(10))
+
+num_list = [1,2,3,4,5,6];
+s_iter = iter(num_list);
+print(next(s_iter))
+print(next(s_iter))
+print(next(s_iter))
+print(next(s_iter))
