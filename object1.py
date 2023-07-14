@@ -205,18 +205,12 @@
 def fubionacci_genarator(n):
     a = 1;
     b = 1;
-    lists = []
     for i in range(n):
-        lists.append(a)
         a,b = b,a+b;
-    return lists
-# for num in fubionacci_genarator(10):
-#      print(num)
-print(fubionacci_genarator(10))
+        yield a
+    
 
-num_list = [1,2,3,4,5,6];
-s_iter = iter(num_list);
-print(next(s_iter))
-print(next(s_iter))
-print(next(s_iter))
-print(next(s_iter))
+for num in fubionacci_genarator(10):
+     print(num)
+
+

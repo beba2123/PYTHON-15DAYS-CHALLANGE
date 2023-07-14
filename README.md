@@ -358,3 +358,27 @@ class TestClass(unittest.TestCase): --> this is a test class
     
 if __name__ == '__main__':  and check lastly if it the unittest is in the main function
     unittest.main()
+
+# Generator
+-> generator is a special type of iterator that is created using a function or a generator expression and allows you to iterate over a sequence of values without storing them all in memory at once
+-> it uses yield keyword instead of return. when the function is called it returns iterator that can  be iterat over using the next() or used for  loop.
+->Generator are memory efficient  becouse it generate value on the fly and store the current value in memory.this make them useful when you want to work with large sequences where genrating all value are impractical.
+
+ def even_numbers():
+    for i in range(n):
+        if i % 2 == 0:
+            yield i;
+    
+for num in even_numbers(10):
+    print(num) -->> the output will be 2,4,6,8
+
+# next function and iter 
+-> next function is used to retrieve the next item from an iterator one by one and if there is no more item to iterate it raises 'stop-iteration' exception.
+numbers = [1,2,3,4,5]
+iterator = iter(numbers) -->>  iter is used to convert into genrator form.
+so after this we can use next() to retrieve data from the array.
+
+print(next(iterator)) -> output 1
+print(next(iterator)) -> output 2
+print(next(iterator)) -> output 3
+
